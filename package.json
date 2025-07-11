@@ -1,0 +1,29 @@
+{
+  "name": "todo-cli-context-experiment",
+  "version": "1.0.0",
+  "description": "Context Engineering experiment: ToDo CLI tool built with VS Code Agent Mode",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsx src/index.ts",
+    "test": "node dist/index.js --help"
+  },
+  "keywords": [
+    "todo",
+    "cli",
+    "typescript",
+    "context-engineering",
+    "vs-code-agent"
+  ],
+  "author": "Context Engineering Experiment",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+  }
+}
