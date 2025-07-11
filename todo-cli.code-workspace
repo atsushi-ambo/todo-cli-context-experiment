@@ -1,0 +1,28 @@
+{
+  "folders": [
+    {
+      "name": "todo-cli-context-experiment",
+      "path": "."
+    }
+  ],
+  "settings": {
+    "mcp.enabled": true,
+    "mcp.configPath": "./mcp.json",
+    "mcp.servers": {
+      "todo-cli": {
+        "enabled": true,
+        "autoStart": true,
+        "priority": "high",
+        "command": "npm",
+        "args": ["run", "mcp"],
+        "cwd": "${workspaceFolder}"
+      }
+    }
+  },
+  "extensions": {
+    "recommendations": [
+      "ms-vscode.vscode-typescript-next",
+      "bradlc.vscode-tailwindcss"
+    ]
+  }
+}

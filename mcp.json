@@ -1,5 +1,11 @@
 {
   "mcpServers": {
+    "todo-cli": {
+      "command": "node",
+      "args": ["dist/index.js"],
+      "description": "Todo CLI MCP server for managing tasks",
+      "cwd": "/Users/usr0200783/atsushi/personal/github/todo-cli-context-experiment"
+    },
     "filesystem": {
       "command": "npx",
       "args": ["-y", "@modelcontextprotocol/server-filesystem", "--allowed-directories", "."],

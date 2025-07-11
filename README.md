@@ -1,9 +1,63 @@
-# ToDo管理CLIツール開発実験
+# ToDo管理CLIツール開発実験 (MCP Server)
 
-このプロジェクトは、コンテクストエンジニアリングの実験として、VS Code Agent Modeを使用してToDo管理CLIツールを開発するものです。
+このプロジェクトは、コンテクストエンジニアリングの実験として、VS Code Agent ModeとMCP (Model Context Protocol) サーバーを使用してToDo管理CLIツールを開発するものです。
 
 ## プロジェクト概要
-TypeScript製のToDo管理CLIツール
+TypeScript製のToDo管理MCPサーバー
+
+## セットアップ方法
+
+1. 依存関係のインストール:
+```bash
+npm install
+```
+
+2. プロジェクトのビルド:
+```bash
+npm run build
+```
+
+3. MCPサーバーの起動:
+```bash
+npm run mcp
+```
+
+## MCP設定
+
+このプロジェクトはMCPサーバーとして動作します。`mcp.json`ファイルには以下の設定があります：
+
+- **todo-cli**: メインのToDo管理MCPサーバー
+- **filesystem**: ファイルシステムアクセス用
+- **memory**: 永続的メモリ機能
+- **sequential-thinking**: 構造化された問題解決機能
+- **smart-crawler**: Webコンテンツ抽出
+- **inspector**: MCP プロトコルデバッグツール
+
+## 利用可能なツール
+
+MCPサーバーは以下のツールを提供します：
+
+- `add_todo`: 新しいタスクを追加
+- `list_todos`: タスクの一覧表示（フィルタリング可能）
+- `complete_todo`: タスクを完了状態にマーク
+- `delete_todo`: タスクを削除
+- `update_todo`: タスクの更新
+
+## データ形式
+
+タスクは`todos.json`ファイルに以下の形式で保存されます：
+
+```json
+{
+  "id": "unique_id",
+  "title": "タスクのタイトル",
+  "description": "タスクの説明（オプション）",
+  "completed": false,
+  "createdAt": "ISO日時",
+  "updatedAt": "ISO日時",
+  "priority": "low|medium|high"
+}
+```
 
 ## 技術制約
 - Node.js 18+ 対応

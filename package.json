@@ -4,18 +4,24 @@
   "description": "Context Engineering experiment: ToDo CLI tool built with VS Code Agent Mode",
   "main": "dist/index.js",
   "type": "module",
+  "bin": {
+    "todo-mcp": "dist/index.js"
+  },
   "scripts": {
     "build": "tsc",
     "start": "node dist/index.js",
     "dev": "tsx src/index.ts",
-    "test": "node dist/index.js --help"
+    "test": "node dist/index.js --help",
+    "mcp": "tsx src/index.ts"
   },
   "keywords": [
     "todo",
     "cli",
     "typescript",
     "context-engineering",
-    "vs-code-agent"
+    "vs-code-agent",
+    "mcp",
+    "model-context-protocol"
   ],
   "author": "Context Engineering Experiment",
   "license": "MIT",
@@ -23,7 +29,11 @@
     "node": ">=18.0.0"
   },
   "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0"
   },
   "devDependencies": {
+    "@types/node": "^20.0.0",
+    "tsx": "^4.0.0",
+    "typescript": "^5.0.0"
   }
 }
