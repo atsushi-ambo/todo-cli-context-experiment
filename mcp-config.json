@@ -1,0 +1,35 @@
+{
+  "mcpServers": {
+    "filesystem": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "--allowed-directories", "."],
+      "description": "Provides safe filesystem access for reading project structure and configuration files"
+    },
+    "memory": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-memory"],
+      "description": "Enables persistent memory through knowledge graphs for enhanced context retention across sessions"
+    },
+    "sequential-thinking": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-sequential-thinking"],
+      "description": "Provides structured problem-solving capabilities and step-by-step reasoning support"
+    },
+    "smart-crawler": {
+      "command": "npx",
+      "args": ["-y", "mcp-smart-crawler"],
+      "description": "Playwright-based web content extraction for research and documentation gathering"
+    },
+    "inspector": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/inspector"],
+      "description": "MCP protocol debugging and server inspection tools for development troubleshooting"
+    }
+  },
+  "experimental": {
+    "contextPriority": "high",
+    "autoDiscovery": true,
+    "memoryEnabled": true,
+    "sequentialThinking": true
+  }
+}
