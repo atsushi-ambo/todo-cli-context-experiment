@@ -1,0 +1,55 @@
+[
+  {
+    "id": "69q41fsa7",
+    "title": "Set up MCP server",
+    "description": "Configure and test the todo-cli MCP server",
+    "completed": false,
+    "createdAt": "2025-07-15T06:03:23.206Z",
+    "updatedAt": "2025-07-15T06:03:23.207Z",
+    "priority": "high"
+  },
+  {
+    "id": "lqzsb24pg",
+    "title": "Write documentation",
+    "description": "Create comprehensive documentation for the project",
+    "completed": false,
+    "createdAt": "2025-07-15T06:03:32.754Z",
+    "updatedAt": "2025-07-15T06:03:32.754Z",
+    "priority": "medium"
+  },
+  {
+    "id": "ghxd5u3i5",
+    "title": "Test functionality",
+    "description": "Verify all features work correctly",
+    "completed": false,
+    "createdAt": "2025-07-15T06:03:45.200Z",
+    "updatedAt": "2025-07-15T06:03:45.200Z",
+    "priority": "low"
+  },
+  {
+    "id": "a0kpo8w1x",
+    "title": "Buy groceries",
+    "description": "Get milk, bread, and eggs",
+    "completed": false,
+    "createdAt": "2025-07-15T06:05:38.063Z",
+    "updatedAt": "2025-07-15T06:05:38.064Z",
+    "priority": "medium"
+  },
+  {
+    "id": "kekanv818",
+    "title": "Finish project report",
+    "description": "Complete the quarterly analysis",
+    "completed": false,
+    "createdAt": "2025-07-15T06:05:45.576Z",
+    "updatedAt": "2025-07-15T06:05:45.577Z",
+    "priority": "high"
+  },
+  {
+    "id": "83bc4i2gj",
+    "title": "Call dentist",
+    "completed": false,
+    "createdAt": "2025-07-15T06:05:57.463Z",
+    "updatedAt": "2025-07-15T06:05:57.464Z",
+    "priority": "low"
+  }
+]

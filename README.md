@@ -24,14 +24,21 @@ npm run mcp
 
 ## MCP設定
 
-このプロジェクトはMCPサーバーとして動作します。`mcp.json`ファイルには以下の設定があります：
+このプロジェクトはMCPサーバーとして動作します。`mcp.json`ファイルには以下の開発特化型サーバーが設定されています：
 
-- **todo-cli**: メインのToDo管理MCPサーバー
-- **filesystem**: ファイルシステムアクセス用
-- **memory**: 永続的メモリ機能
-- **sequential-thinking**: 構造化された問題解決機能
-- **smart-crawler**: Webコンテンツ抽出
-- **inspector**: MCP プロトコルデバッグツール
+### 実験対象サーバー
+- **todo-cli**: メインのToDo管理MCPサーバー（実験の主要対象）
+
+### 開発支援サーバー
+- **filesystem**: プロジェクト構造とファイルへの安全なアクセス
+- **brave-search**: TypeScript/CLI例とドキュメント検索
+- **puppeteer**: ブラウザ自動化によるテストとドキュメント取得
+- **everything**: MCP プロトコル全機能のリファレンス実装
+
+### 認知支援サーバー
+- **memory**: セッション間での開発コンテクスト永続化
+- **sequential-thinking**: 複雑な開発タスクの構造化問題解決
+- **inspector**: MCP プロトコルデバッグとトラブルシューティング
 
 ## 利用可能なツール
 
@@ -83,24 +90,30 @@ MCPサーバーは以下のツールを提供します：
 - コマンドヘルプの充実（--help）
 - カラフルな出力（chalk使用）
 
-## 期待するファイル構造
+## プロジェクト構造
 ```
-project-root/
-├── src/
-│   ├── index.ts (エントリーポイント)
-│   ├── commands/
-│   │   ├── add.ts
-│   │   ├── list.ts
-│   │   ├── done.ts
-│   │   └── delete.ts
-│   ├── types/
-│   │   └── todo.ts
-│   └── utils/
-│       └── storage.ts
-├── dist/                 # ビルド出力
-├── package.json
-├── tsconfig.json
-└── README.md
+todo-cli-context-experiment/
+├── src/                      # ソースコード
+│   └── index.ts             # MCPサーバーエントリーポイント
+├── dist/                    # ビルド出力 (gitignore)
+├── docs/                    # ドキュメント
+│   ├── CONTEXT.md          # 開発コンテクストと品質基準
+│   ├── EXPERIMENT.md       # 実験実行ガイド
+│   └── MCP_SETUP.md        # MCP設定・テスト手順
+├── scripts/                 # ユーティリティスクリプト
+│   ├── mcp-troubleshoot.sh # MCP診断ツール
+│   └── test-mcp-servers.sh # MCPサーバー接続テスト
+├── .vscode/                 # VS Code設定
+│   ├── mcp.json           # MCP開発支援サーバー設定
+│   └── settings.json      # エディタ設定
+├── node_modules/           # 依存関係 (gitignore)
+├── .gitignore             # Git除外設定
+├── package.json           # プロジェクト設定
+├── package-lock.json      # 依存関係ロック
+├── tsconfig.json          # TypeScript設定
+├── todo-cli.code-workspace # VS Codeワークスペース
+├── todos.json             # ToDoデータストレージ
+└── README.md              # プロジェクト概要（このファイル）
 ```
 
 ## データ型定義
@@ -136,4 +149,10 @@ npm run start delete 1
 ```
 
 ## 実験の目的
-VS Code Agent Modeが、このREADMEとpackage.json、tsconfig.jsonの情報を活用して、どの程度完成度の高いアプリケーションを生成できるかを検証する。
+VS Code Agent Modeが、豊富なコンテクスト情報（README、package.json、tsconfig.json、MCP開発支援サーバー群）を活用して、どの程度完成度の高いアプリケーションを生成できるかを検証する。
+
+### コンテクストエンジニアリングの検証項目
+1. **静的コンテクスト**: プロジェクトファイル（README、設定ファイル等）の活用度
+2. **動的コンテクスト**: MCP検索・ブラウザ自動化による即座の情報収集
+3. **認知支援**: memory・sequential-thinking による開発プロセス向上
+4. **品質保証**: inspector・everything による動作検証と問題解決

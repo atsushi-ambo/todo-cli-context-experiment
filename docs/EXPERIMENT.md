@@ -9,7 +9,7 @@
 - [x] .gitignore（除外設定）
 - [x] .vscode/settings.json（エディタ設定）
 - [x] CONTEXT.md（開発コンテクスト）
-- [x] mcp-config.json（MCP設定）
+- [x] mcp.json（MCP開発支援サーバー設定）
 
 ### 2. VS Code設定
 1. プロジェクトをVS Codeで開く
@@ -24,12 +24,22 @@
 このプロジェクトのREADME.mdに記載された仕様に従って、完全に動作するToDo管理CLIツールを実装してください。
 
 ## 利用可能なコンテクスト情報
+
+### 静的コンテクスト
 - README.md: 詳細な技術仕様とファイル構造
 - package.json: プロジェクト設定とスクリプト
 - tsconfig.json: TypeScript厳密設定
 - CONTEXT.md: 開発背景と品質基準
 - .vscode/settings.json: 開発環境設定
-- MCP: 時間情報とファイルシステムアクセス
+
+### 動的コンテクスト（MCP開発支援）
+- filesystem: プロジェクト構造とファイルアクセス
+- brave-search: TypeScript/CLI関連ドキュメント検索
+- puppeteer: ブラウザ自動化による情報収集
+- everything: MCP機能リファレンス
+- memory: セッション間コンテクスト保持
+- sequential-thinking: 構造化問題解決
+- inspector: リアルタイムデバッグ
 
 ## 要求事項
 1. TypeScript strict mode完全準拠
@@ -49,11 +59,20 @@
 ```
 
 ### 記録すべき観察ポイント
+
+#### 基本開発プロセス
 1. **ファイル作成順序**: どのファイルから作成するか
 2. **依存関係解決**: package.jsonの更新タイミング
 3. **エラー検知と修正**: ビルドエラーへの対応
 4. **設定ファイル活用**: tsconfig.jsonやVS Code設定の参照
-5. **MCP利用**: 時間情報やファイルシステム情報の活用
+
+#### MCP開発支援活用度
+5. **filesystem利用**: プロジェクト構造の理解度
+6. **brave-search活用**: 外部ドキュメント検索の頻度・精度
+7. **puppeteer使用**: ブラウザ自動化による情報収集
+8. **memory機能**: セッション間でのコンテクスト保持
+9. **sequential-thinking**: 複雑タスクの構造化分解
+10. **inspector活用**: 問題解決・デバッグプロセス
 
 ### 実験後の検証
 ```bash
