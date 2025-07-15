@@ -51,5 +51,14 @@
     "createdAt": "2025-07-15T06:05:57.463Z",
     "updatedAt": "2025-07-15T06:05:57.464Z",
     "priority": "low"
+  },
+  {
+    "id": "zek4r1app",
+    "title": "Demo: Test MCP Server",
+    "description": "Testing the todo-cli MCP server functionality",
+    "completed": true,
+    "createdAt": "2025-07-15T08:34:35.608Z",
+    "updatedAt": "2025-07-15T08:34:49.143Z",
+    "priority": "high"
   }
 ]

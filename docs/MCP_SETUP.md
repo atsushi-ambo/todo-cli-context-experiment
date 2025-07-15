@@ -49,12 +49,12 @@ code todo-cli.code-workspace
   "mcpServers": {
     "todo-cli": {
       "command": "node", 
-      "args": ["dist/index.js"],
+      "args": ["../dist/index.js"],
       "description": "Todo CLI MCP server - 実験対象"
     },
     "filesystem": {
       "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-filesystem", "--allowed-directories", ".", "../../"],
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "--allowed-directories", ".", "../.."],
       "description": "プロジェクト構造アクセス"
     },
     "brave-search": {
@@ -67,6 +67,11 @@ code todo-cli.code-workspace
       "args": ["-y", "@modelcontextprotocol/server-puppeteer"], 
       "description": "ブラウザ自動化"
     },
+    "everything": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-everything"],
+      "description": "MCP プロトコル全機能のリファレンス"
+    },
     "memory": {
       "command": "npx",
       "args": ["-y", "@modelcontextprotocol/server-memory"],
@@ -76,11 +81,6 @@ code todo-cli.code-workspace
       "command": "npx", 
       "args": ["-y", "@modelcontextprotocol/server-sequential-thinking"],
       "description": "構造化問題解決"
-    },
-    "inspector": {
-      "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/inspector"],
-      "description": "MCP デバッグツール"
     }
   }
 }
